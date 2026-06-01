@@ -3,6 +3,7 @@ package br.com.etechoracio.playlivros.test;
 import br.com.etechoracio.playlivros.enums.VersaoEnum;
 import br.com.etechoracio.playlivros.model.AudioBook;
 import br.com.etechoracio.playlivros.model.Livro;
+import br.com.etechoracio.playlivros.model.LivroImpresso;
 import br.com.etechoracio.playlivros.model.SacolaDeCompras;
 
 import java.time.LocalDate;
@@ -64,6 +65,16 @@ public class CarrinhoCompras {
         quartoLivro.setDataLancamento(LocalDate.now());
         quartoLivro.exibir();
 
+        LivroImpresso primeirolivro = new LivroImpresso();
+        quartoLivro.setTitulo("Cem anos de solidão");
+        quartoLivro.setAutor("Gabriel Garcia Marquez");
+        quartoLivro.setEditora("Hextech Books");
+        quartoLivro.setVersao(VersaoEnum.INTEGRAL);
+        quartoLivro.setPreco(89.99);
+        quartoLivro.setResumo("Descubra o mundo de Gabriel Garcias Marquez em cem anos de solid.");
+        quartoLivro.setDataLancamento(LocalDate.now());
+        quartoLivro.exibir();
+
 
 
         SacolaDeCompras sacola = new SacolaDeCompras();
@@ -71,6 +82,7 @@ public class CarrinhoCompras {
         sacola.adicionar(segundolivro);
         sacola.adicionar(terceiroLivro);
         sacola.adicionar(quartoLivro);
+        sacola.adicionar((primeirolivro));
         sacola.exibirTotal();
     }
 

@@ -20,4 +20,11 @@ public class AudioBook extends Livro{
     public void setVersao(VersaoEnum versao) {
         this.versao = versao;
     }
+
+    @Override
+    protected void exibirDetalhes() {
+        System.out.println("Narrador: " + narrador);
+        System.out.println("Duração: "+ duracao);
+        System.out.println("Versão: "+ versao);
+    }
 }

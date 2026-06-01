@@ -21,7 +21,9 @@ public abstract class Livro {
         System.out.println("Autor: " + autor);
         System.out.println("Editora: " + editora);
         System.out.println("Situação: " + obterDisponibilidade());
+        exibirDetalhes();
     }
+    protected abstract void exibirDetalhes();
 
     public DisponibilidadeEnum obterDisponibilidade(){
         LocalDate dataAtual = LocalDate.now();
