@@ -6,7 +6,7 @@ import br.com.etechoracio.playlivros.enums.VersaoEnum;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Livro {
+public abstract class Livro {
     //tipo nomeVariavel;
     private String titulo;
     private String autor;
