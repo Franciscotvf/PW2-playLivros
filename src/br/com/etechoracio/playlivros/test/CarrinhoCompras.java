@@ -1,10 +1,7 @@
 package br.com.etechoracio.playlivros.test;
 
 import br.com.etechoracio.playlivros.enums.VersaoEnum;
-import br.com.etechoracio.playlivros.model.AudioBook;
-import br.com.etechoracio.playlivros.model.Livro;
-import br.com.etechoracio.playlivros.model.LivroImpresso;
-import br.com.etechoracio.playlivros.model.SacolaDeCompras;
+import br.com.etechoracio.playlivros.model.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -75,15 +72,26 @@ public class CarrinhoCompras {
         quartoLivro.setDataLancamento(LocalDate.now());
         quartoLivro.exibir();
 
-
+        Pocket quintolivro = new Pocket();
+        quintolivro.setTitulo("The History Of The Game Brawlhalla");
+        quintolivro.setAutor("Ubisoft");
+        quintolivro.setEditora("Editora FarmaAura");
+        quintolivro.setPreco(200.00);
+        quintolivro.setPaginas(96);
+        quintolivro.setLargura(13.5);
+        quintolivro.setAltura(20.5);
 
         SacolaDeCompras sacola = new SacolaDeCompras();
         sacola.adicionar(primeioLivro);
         sacola.adicionar(segundolivro);
         sacola.adicionar(terceiroLivro);
         sacola.adicionar(quartoLivro);
+        sacola.adicionar(quintolivro);
         sacola.adicionar((primeirolivro));
         sacola.exibirTotal();
+
+
+
     }
 
 }

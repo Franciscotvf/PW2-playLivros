@@ -2,11 +2,12 @@ package br.com.etechoracio.playlivros.model;
 
 import br.com.etechoracio.playlivros.enums.DisponibilidadeEnum;
 import br.com.etechoracio.playlivros.enums.VersaoEnum;
+import br.com.etechoracio.playlivros.interfaces.Publicacao;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public abstract class Livro {
+public abstract class Livro implements Publicacao {
     //tipo nomeVariavel;
     private String titulo;
     private String autor;
