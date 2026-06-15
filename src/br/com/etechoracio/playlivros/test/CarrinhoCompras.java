@@ -4,7 +4,6 @@ import br.com.etechoracio.playlivros.enums.VersaoEnum;
 import br.com.etechoracio.playlivros.model.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class CarrinhoCompras {
@@ -80,6 +79,8 @@ public class CarrinhoCompras {
         quintolivro.setPaginas(96);
         quintolivro.setLargura(13.5);
         quintolivro.setAltura(20.5);
+        quintolivro.aplicarDesconto(0.10);
+
 
         SacolaDeCompras sacola = new SacolaDeCompras();
         sacola.adicionar(primeioLivro);

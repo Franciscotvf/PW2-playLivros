@@ -25,4 +25,8 @@ public class Pocket extends Livro {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+
+    public void aplicarDesconto (double percentual){
+
+    }
 }

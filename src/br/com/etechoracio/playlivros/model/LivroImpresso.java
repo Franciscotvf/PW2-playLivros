@@ -1,6 +1,8 @@
 package br.com.etechoracio.playlivros.model;
 
-public class LivroImpresso extends Livro {
+import br.com.etechoracio.playlivros.interfaces.ElegivelParaDesconto;
+
+public class LivroImpresso extends Livro implements ElegivelParaDesconto {
     private int paginas;
 
     public void setPaginas(int paginas) {
@@ -19,5 +21,12 @@ public class LivroImpresso extends Livro {
     @Override
     public double getPreco() {
         return preco + getTaxaEnvio();
+    }
+
+    @Override
+    public void aplicarDesconto(double percentual) {
+        if (percentual <= 0.25){
+            preco = preco - (preco * percentual);
+        }
     }
 }
